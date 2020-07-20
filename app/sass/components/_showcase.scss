@@ -1,0 +1,51 @@
+.showcase {
+  background-color: $color-grey-dark-3;
+  height: 200rem;
+  position: relative;  // so overlay covers entire section
+  transition: all .3s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(tab-land) { height: auto; }
+
+  &__content {
+    padding-bottom: 7rem;
+    width: 105rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    // Control width of .long-card
+    @include respond(tab-land) { width: 84rem; }
+    @include respond(tab-port) { width: 40rem; }
+    @include respond(phone) { width: 30rem; }
+  }
+
+  &__heading, &__divider { 
+    align-self: flex-start; 
+    z-index: 1;
+  }
+
+  &__overlay {
+    background: $color-black;
+    height: 100%;
+    opacity: 0;
+    transition: all .3s;
+    width: 100%;
+    z-index: -1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--active {
+      opacity: .8;
+      z-index: 1000;
+    }
+
+    @include respond(tab-land) { display: none; }
+  }
+}

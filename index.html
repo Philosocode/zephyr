@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Tam Le, developer portfolio, full stack">
+    <meta name="description" content="Portfolio site of Tam Le, full-stack developer.">
+
+    <title>Tam Le - Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="app/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/app/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/app/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/app/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/app/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/app/img/favicons/safari-pinned-tab.svg" color="#00b27d">
+    <link rel="shortcut icon" href="/app/img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/app/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127104112-1" type="text/javascript"></script>
+    <script type="text/javascript">
+    (function() {
+        if (document.location.hostname.search("www.tamxle.com") !== -1) {
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag(){dataLayer.push(arguments);}
+
+            gtag('js', new Date());
+            gtag('config', 'UA-127104112-1');
+        }
+    })();
+    </script>
+</head>
+
+<body>
+    <div class="navigation navigation__hidden">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="/#" class="navigation__link">HERO</a></li>
+                <li class="navigation__item"><a href="/#about" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="/#why" class="navigation__link">Why</a></li>
+                <li class="navigation__item"><a href="/#showcase" class="navigation__link">Showcase</a></li>
+                <li class="navigation__item"><a href="/#projects" class="navigation__link">Projects</a></li>
+                <li class="navigation__item"><a href="/#contact" class="navigation__link">Contact</a></li>
+                <li class="navigation__item"><a href="https://www.philosocode.com" class="navigation__link" target="_blank" rel="noopener">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header__logo-box">
+            <img class="header__logo header__logo--grayscale" src="app/img/logo-grayscale.svg" alt="Zephyr Logo, No Color">
+            <img class="header__logo header__logo--color" src="app/img/logo-color.svg" alt="Zephyr Logo, Color">
+        </div>
+        <ul class="header__list">
+            <li class="header__item">
+                <a href="#about" class="header__link">About</a>
+            </li>
+            <li class="header__item">
+                <a href="#why" class="header__link">Why</a>
+            </li>
+            <li class="header__item">
+                <a href="#showcase" class="header__link">Showcase</a>
+            </li>
+            <li class="header__item">
+                <a href="#projects" class="header__link">Projects</a>
+            </li>
+            <li class="header__item">
+                <a href="#contact" class="header__link">Contact</a>
+            </li>
+            <li class="header__item">
+                <a href="https://www.philosocode.com" class="header__link">Blog</a>
+            </li>
+        </ul>
+    </header>
+
+    <main role="main">
+        <section class="hero">
+            <div class="hero__container">
+    
+                <div class="hero__left-side">
+                    <h1 class="heading heading--green heading--bold hero__heading">Tam Le</ >
+                    <h2 class="heading heading--green heading--thin hero__subheading">Developer At Your Service</h2>
+                </div>
+        
+                <div class="hero__divider"></div>
+    
+                <div class="hero__right-side">
+                    <p class="body-text body-text--green-dark-1">
+                        You have an idea.<br>
+                        A vision for a product.<br><br>
+            
+                        I can help you build it.<br><br>
+                        Let's work together and make it a reality.
+                    </p>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section class="about" id="about">
+            <div class="about__image-side">
+                <img class="about__image" src="app/img/illustration-monitor-no-hair.svg" alt="Cool stick person">
+            </div>
+            <div class="about__text-side">
+                <div class="about__text-container">
+                    <h2 class="heading heading--section-padding heading--green">About Me</h2>
+                    <div class="heading__divider heading__divider--green heading__divider--left-align"></div>
+    
+                    <p class="body-text body-text--green u-margin-top-small">
+                        I'm Tam, a developer who is driven to create beautiful, usable products that please the eye and
+                        delight the user.<br><br>
+    
+                        My knowledge of full-stack development, meticulous attention to detail, and focus on best
+                        practices enable me to build
+                        clean, scalable, and performant applications.<br><br>
+    
+                        Currently, I'm working towards a BS. Computer Science with a minor in Mathematics.
+                    </p>
+                </div> 
+            </div>
+        </section>
+    
+        <section class="why" id="why">
+            <div class="heading heading--section-padding heading--grey-light-2 u-center-text">Why Choose Me?</div>
+            <div class="heading__divider heading__divider--grey-light-2"></div>
+    
+            <div class="flip-card__container">
+                <div class="flip-card">
+                    <div class="flip-card__side flip-card__side--front">
+                        <div class="flip-card__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 class="flip-card__title heading-secondary">Performance</h4>
+                        <p class="flip-card__description body-text body-text--small u-center-text">
+                            Fast. Clean. Powerful.
+                            <br>
+                            Your product is optimized for performance and built for speed.
+                        </p>
+                    </div>
+                    <div class="flip-card__side flip-card__side--back flip-card__side--back--red">
+                        <div class="flip-card__icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4 class="flip-card__title heading-secondary">Modern</h4>
+                        <p class="flip-card__description body-text body-text--small u-center-text">
+                            Rest assured, your product is created with best practices
+                            and cutting-edge technologies.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="flip-card">
+                    <div class="flip-card__side flip-card__side--front">
+                        <div class="flip-card__icon">
+                            <i class="fab fa-fort-awesome"></i>
+                        </div>
+                        <h4 class="flip-card__title heading-secondary">Built To Last</h4>
+                        <p class="flip-card__description body-text body-text--small u-center-text">
+                            Crafted with care and attention to the finest details.
+                            <br>
+                            Created with the long-term in mind.
+                        </p>
+                    </div>
+                    <div class="flip-card__side flip-card__side--back flip-card__side--back--blue">
+                        <div class="flip-card__icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h4 class="flip-card__title heading-secondary">Easy</h4>
+                        <p class="flip-card__description body-text body-text--small u-center-text">
+                            Working with me is a breeze.
+                            <br>
+                            Let me do the heavy lifting so you can focus on what matters most.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="flip-card">
+                    <div class="flip-card__side flip-card__side--front">
+                        <div class="flip-card__icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="flip-card__title heading-secondary">Responsive</h4>
+                        <p class="flip-card__description body-text body-text--small u-center-text">
+                            Adaptive products that look amazing and perform well on any device.
+                            <br>
+                            Guaranteed.
+                        </p>
+                    </div>
+                    <div class="flip-card__side flip-card__side--back flip-card__side--back--green">
+                        <div class="flip-card__icon">
+                            <i class="far fa-check-circle"></i>
+                        </div>
+                        <h4 class="flip-card__title heading-secondary">
+                            Intuitive
+                        </h4>
+                        <p class="flip-card__description body-text body-text--small u-center-text">
+                            Clear. Comprehensible.
+                            <br>
+                            Design that makes sense and helps your users achieve their goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="showcase" id="showcase">
+            <div class="showcase__overlay"></div>
+            <div class="showcase__content">
+                <h2 class="showcase__heading heading heading--section-padding heading--grey-light-2">Showcase</h2>
+                <div class="showcase__divider heading__divider heading__divider--left-align heading__divider--grey-light-2"></div>
+        
+                <div class="long-card long-card--first">
+                    <a a href="https://www.darronta.com" target="_blank" rel="noopener noreferrer">
+                        <div class="long-card__image-box">
+                            <img src="app/img/darron-ta.jpg" alt="Darron Ta Portfolio" class="long-card__image">
+                            <div class="long-card__btn-container">
+                                <a href="https://www.darronta.com" target="_blank" rel="noopener noreferrer">
+                                    <button class="long-card__btn btn btn--white">Visit Site</button>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="long-card__divider"></div>
+                    <div class="long-card__text-container">
+                        <h3 class="long-card__title">darronta.com</h3>
+                        <h4 class="long-card__subtitle">Description</h4>
+                        <p class="long-card__description">
+                            Portfolio for Darron Ta aspiring performer and stunt actor.
+                        </p>
+                        <h4 class="long-card__subtitle">Built With</h4>
+                        <p class="long-card__description">React | Gatsby</p>
+                        <a class="long-card__link" href="https://www.darronta.com">Visit Site &rarr;</a>
+                    </div>
+                </div>
+        
+                <div class="long-card">
+                    <div class="long-card__text-container long-card__text-container--middle-card">
+                        <h3 class="long-card__title">KA-Chingu</h3>
+                        <h4 class="long-card__subtitle">Description</h4>
+                        <p class="long-card__description">
+                            Basic full-stack web app for tracking income and expenses.
+                            Built with other team members for <a href="https://chingu.io">chingu.io</a> voyage 8.
+                        </p>
+                        <h4 class="long-card__subtitle">Built With</h4>
+                        <p class="long-card__description">React | Redux | Express | PostgreSQL</p>
+                        <a class="long-card__link" href="https://ka-chingu.herokuapp.com">&larr; Visit Site</a>
+                    </div>
+                    <div class="long-card__divider long-card__divider--middle-card"></div>
+                    <a href="https://ka-chingu.herokuapp.com">
+                        <div class="long-card__image-box">
+                            <div class="long-card__image">
+                                <img src="app/img/ka-chingu.jpg" alt="KA-Chingu" class="long-card__image">
+                                <div class="long-card__btn-container">
+                                    <a href="https://ka-chingu.herokuapp.com">
+                                        <button class="long-card__btn long-card__btn--middle-card btn btn--white">Visit Site</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="long-card long-card">
+                    <a href="https://3takesorless.com">
+                        <div class="long-card__image-box">
+                            <div class="long-card__image">
+                                <img src="app/img/3tl.jpg" alt="3 Takes or Less" class="long-card__image">
+                                <div class="long-card__btn-container">
+                                    <a href="https://3takesorless.com"><button class="long-card__btn btn btn--white">Visit Site</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="long-card__divider"></div>
+                    <div class="long-card__text-container">
+                        <h3 class="long-card__title">3 Takes or Less</h3>
+                        <h4 class="long-card__subtitle">Description</h4>
+                        <p class="long-card__description">
+                            Website for up and coming stunt team based in Edmonton.
+                        </p>
+                        <h4 class="long-card__subtitle">Built With</h4>
+                        <p class="long-card__description">React | Gatsby</p>
+                        <a class="long-card__link" href="https://3takesorless.com">Visit Site &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="long-card long-card--last">
+                    <div class="long-card__text-container long-card__text-container--middle-card">
+                        <h3 class="long-card__title">POLITIK™</sup></h3>
+                        <h4 class="long-card__subtitle">Description</h4>
+                        <p class="long-card__description">
+                            Website for POLITIK™, <em>"the first creative agency to integrate meaningful human connection into the age of singularity."</em></p>
+                        <h4 class="long-card__subtitle">Built With</h4>
+                        <p class="long-card__description">SCSS | WordPress</p>
+                        <a class="long-card__link" href="https://www.politik.ca">&larr; Visit Site</a>
+                    </div>
+                    <div class="long-card__divider long-card__divider--middle-card"></div>
+                    <a href="http://www.politik.ca">
+                        <div class="long-card__image-box">
+                            <div class="long-card__image">
+                                <img src="app/img/politik.jpg" alt="POLITIK" class="long-card__image">
+                                <div class="long-card__btn-container">
+                                    <a href="https://www.politik.ca"><button class="long-card__btn long-card__btn--middle-card btn btn--white">Visit Site</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section class="projects" id="projects">
+            <h2 class="heading heading--section-padding heading--green-dark-1 u-center-text">Projects</h2>
+            <div class="heading__divider heading__divider--green-dark-1"></div>
+    
+            <div class="projects__container">
+    
+                <a href="https://www.philosocode.com">
+                    <div class="projects__image-box">
+                        <img src="app/img/philosocode.jpg" alt="Philosocode Blog" class="projects__image">
+                    </div>
+                </a>
+    
+                <a href="https://tamxle.com/lilac">
+                    <div class="projects__image-box">
+                        <img src="app/img/lilac.jpg" alt="Lilac" class="projects__image">
+                    </div>
+                </a>
+    
+                <!-- <a href="#projects">
+                    <div class="projects__image-box">
+                        <img src="app/img/sample-project.jpg" alt="Sample Project" class="projects__image">
+                    </div>
+                </a>
+    
+                <a href="#projects">
+                    <div class="projects__image-box">
+                        <img src="app/img/sample-project.jpg" alt="Sample Project" class="projects__image">
+                    </div>
+                </a>
+            </div> -->
+    
+        </section>
+    
+        <section class="contact">
+            <div id="contact"></div>
+    
+            <form class="form" accept-charset="UTF-8" action="https://formspree.io/hello@tamxle.com" method="POST">
+                <h2 class="form__heading heading heading--grey-light-1 u-center-text">Keep In Touch</h2>
+                <div class="heading__divider heading__divider--grey-light-2"></div>
+    
+                <div class="form__group u-margin-top-small">
+                    <input type="text" class="form__input" placeholder="Name" id="name" name="name" required>
+                    <label for="name" class="form__label">Name</label>
+                </div>
+    
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" id="email" name="email" required>
+                    <label for="email" class="form__label">Email</label>
+                </div>
+    
+                <div class="form__group">
+                    <textarea type="text" class="form__input" id="message" name="message" placeholder="Your Message"
+                        rows="12" cols="55" maxlength="999" required></textarea>
+                    <label for="message" class="form__label">Message</label>
+                </div>
+    
+                <div class="form__group">
+                    <button class="btn btn--white" type="submit">Submit</button>
+                </div>
+    
+                <input type="hidden" name="_next" value="#contact" />
+    
+                <input type="hidden" name="_subject" value="New submission!" />
+            </form>
+    
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__icons">
+            <a href="https://github.com/Philosocode" target="_blank" rel="noopener noreferrer" class="footer__icon-link">
+                <div class="footer__icon-circle">
+                    <i class="footer__icon fab fa-github"></i>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/tamxle/" target="_blank" rel="noopener noreferrer" class="footer__icon-link">
+                <div class="footer__icon-circle">
+                    <i class="footer__icon fab fa-linkedin-in"></i>
+                </div>
+            </a>
+
+            <a href="mailto:hello@tamxle.com" target="_blank" rel="noopener noreferrer" class="footer__icon-link">
+                <div class="footer__icon-circle">
+                    <i class="footer__icon fas fa-envelope"></i>
+                </div>
+            </a>
+            
+            <a href="https://www.philosocode.com" target="_blank" rel="noopener noreferrer" class="footer__icon-link">
+                <div class="footer__icon-circle">
+                    <i class="footer__icon fas fa-rss"></i>
+                </div>
+            </a>
+        </div>
+
+        <p class="footer__text">
+            Crafted By Me <span class="footer__copyright">&copy; 2019</span>
+        </p>
+    </footer>
+
+    <script src="app/js/lib/waypoints.min.js" type="text/javascript"></script>
+    <script src="app/js/navigation.min.js" type="text/javascript"></script>
+    <script defer src="app/js/lib/body-scroll-lock.min.js" type="text/javascript"></script>
+    <script defer src="app/js/lib/zenscroll.min.js" type="text/javascript"></script>
+    <script defer src="app/js/overlay.min.js" type="text/javascript"></script>
+</body>
+
+</html>

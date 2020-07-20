@@ -1,0 +1,204 @@
+.flip-card__container {
+  height: auto;
+  margin: 6rem 0;
+
+  display: flex;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include respond(tab-port) { margin-top: 5rem; }
+  @include respond(phone) { margin-top: 4rem; }
+}
+
+.flip-card {
+  cursor: pointer;
+  margin: 0 5.5rem;
+  perspective: 150rem;
+
+  // Set size of each card face
+  height: 40rem;
+  width: 30rem;
+
+  // Starting from tab-landscape (<1200px), this will control styles for 2 cards (front and back, side-by-side)
+  @include respond(tab-land) {
+    cursor: default;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    &:not(:last-child) { margin-bottom: 5rem; }
+  }
+
+  @include respond(tab-port) {
+    height: 34rem;
+    width: 26rem;
+  }
+
+  @include respond(phone) {
+    display: block;
+    height: 52rem;  // Now both sides are stacked on top of each other
+    margin: 0;
+    width: 19rem;
+    
+    flex-direction: column;
+  }
+
+  // Styles for both card faces
+  &__side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 2rem;
+    box-shadow: $box-shadow-default;
+    transition: all .3s ease;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    // Control icon & text content for each card
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include respond(tab-land) {
+      margin: 0 4rem;
+      position: static;
+    }
+
+    @include respond(tab-port) { margin: 0 2rem; }
+    @include respond(phone) { margin: 0; }
+
+    // Use min-* to make sure the cards don't get scrunched up
+    // Size of each card face is determined by .flip-card height & width
+    &--front, &--back {
+      min-height: 100%;
+      min-width: 100%;
+
+      @include respond(phone) { min-height: 50%; }
+    }
+
+    &--front {
+      background-color: $color-grey-light-2;
+      color: $color-grey-dark-3;
+
+      @include respond(tab-land) { transform: rotateY(0); }
+      @include respond(phone) { 
+        position: relative;
+        left: -2rem; 
+      }
+    }
+
+    &--back {
+      background-color: $color-grey-dark-3;
+      color: $color-grey-light-2;
+      transform: rotateY(180deg);
+
+      @include respond(tab-land) {
+        transform: rotateY(0);
+
+        &--red { color: lighten($color-red, 4%); }
+        &--blue { color: $color-blue; }
+        &--green { color: $color-green-light-1; }
+      }
+
+      @include respond(phone) {
+        margin-top: 2.5rem;
+        position: relative;
+        left: 2rem;
+      }
+    }
+  }
+
+  &:hover &__side {
+    &--front {
+      transform: rotateY(-180deg) translateY(-0.5rem);
+
+      @include respond(tab-land) { transform: none; }
+    }
+
+    &--back {
+      transform: rotateY(0) translateY(-0.5rem);
+
+      @include respond(tab-land) { transform: none; }
+    }
+  }
+
+  &:active &__side {
+    box-shadow: $box-shadow-pressed;
+
+    &--back {
+      transform: translateY(-0.25rem);
+
+      @include respond(tab-land) { transform: none; }
+
+      &--red { color: $color-red; }
+      &--blue { color: $color-blue; }
+      &--green { color: $color-green-light-1; }
+    }
+  }
+
+  &__icon {
+    margin: 0;
+    transform: translateY(5rem);
+
+    @include respond(tab-port) { transform: translateY(4rem); }
+    @include respond(phone) { transform: translateY(3rem); }
+
+    & > i {
+      font-size: 7.5rem;
+
+      @include respond(tab-port) { font-size: 6rem; }
+      @include respond(phone) { font-size: 4rem; }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    transform: translateY(8rem);
+
+    // Separate desktop styles for Firefox to reduce text jitters...
+    @include firefox-styles {
+      position: absolute;
+      top: 39%;
+      transform: none;
+
+      @include respond(tab-port) { position: static; }
+    }
+
+    @include respond(tab-port) { transform: translateY(6rem); }
+    @include respond(phone) { transform: translateY(4rem); }
+  }
+
+  &__description {
+    margin: 0;
+    max-width: 22rem;
+    transform: translateY(8rem);
+
+    // Separate desktop styles for Firefox to reduce text jitters...
+    @include firefox-styles {
+      transform: none;
+      position: absolute;
+      top: 49%;
+
+      @include respond(tab-port) { position: static; }
+    }
+
+    @include respond(tab-port) { 
+      max-width: 21rem;
+      transform: translateY(5.7rem);
+    }
+
+    @include respond(phone) { 
+      max-width: 18rem;
+      transform: translateY(4rem);
+    }
+  }
+}

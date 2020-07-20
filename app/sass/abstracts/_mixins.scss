@@ -1,0 +1,32 @@
+@mixin chrome-styles {
+  @media screen and (-webkit-min-device-pixel-ratio:0)
+    and (min-resolution:.001dpcm) {
+      @content;
+  }
+}
+
+@mixin firefox-styles {
+  @supports (-moz-appearance: none) {
+    @content;
+  }
+}
+
+@mixin safari-styles {
+  @media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) { 
+    @content;
+  }}
+}
+
+@mixin absCenter {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Make image fill div without changing aspect ratio
+@mixin fitImageToDiv {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}

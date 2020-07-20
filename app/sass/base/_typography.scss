@@ -1,0 +1,74 @@
+.body-text {
+  font-family: $font-secondary;
+  font-size: 2.2rem;
+  font-weight: 400;
+  
+  &--green { color: $color-green; }
+  &--green-dark-1 { color: $color-green-dark-1; }
+  &--small { font-size: 2rem; }
+
+  @include respond(tab-port) { font-size: 1.9rem; line-height: 1.5; }
+  @include respond(phone) { font-size: 1.6rem; }
+}
+
+.heading {
+  font-family: $font-primary;
+  font-size: 4.6rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  @include respond(tab-port) { font-size: 4rem; }
+  @include respond(phone) { font-size: 3.2rem; }
+
+  &--section-padding { 
+    padding-top: 9rem;
+
+    // Dynamic padding-top for section heading
+    @include respond(tab-land) { padding-top: 7rem; }
+    @include respond(tab-port) { padding-top: 5rem; }
+    @include respond(phone) { padding-top: 3rem; }
+  }
+
+  &--green { color: $color-green; }
+  &--green-dark-1 { color: $color-green-dark-1; }
+  &--grey-light-1 { color: $color-grey-light-1; }
+  &--grey-light-2 { color: $color-grey-light-2; }
+
+  &--thin { font-weight: 300; }
+  &--bold { font-weight: 700; }
+}
+
+.heading-secondary {
+  font-family: $font-secondary;
+  font-size: 2.6rem;
+
+  @include respond(tab-port) { font-size: 2.2rem; }
+  @include respond(phone) { font-size: 2rem; }
+}
+
+.heading__divider {
+  height: .4rem;
+  margin: .3rem auto 1rem auto;
+  position: relative;
+  text-align: center;
+  width: 8rem;
+
+  &--left-align { margin: 0; }
+
+  &--blue { background-color: $color-blue; }
+  &--grey-light-1 { background-color: $color-grey-light-1; }
+  &--grey-light-2 { background-color: $color-grey-light-2; }
+  &--green { background-color: $color-green; }
+  &--green-dark-1 { background-color: $color-green-dark-1; }
+
+  @include respond(tab-port) {
+    height: .3rem;
+    margin-bottom: -1rem;
+    width: 6.5rem;
+  }
+
+  @include respond(phone) {
+    width: 4.6rem;
+  }
+}

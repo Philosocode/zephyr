@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-grey-dark-5;
+  font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5%
+  -moz-osx-font-smoothing: grayscale; 
+  -webkit-font-smoothing: antialiased; 
+}
+
+body {
+  color: $color-grey-dark-3;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $color-green;
+}
+
+::selection {
+  background-color: $color-green;
+  color: $color-white;
+}

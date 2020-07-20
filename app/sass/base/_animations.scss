@@ -1,0 +1,144 @@
+// While loading, don't play animations
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+/* ========
+   HERO
+   ======== */
+@keyframes greenGlow {
+  0% {
+    background-color: $color-green-light-2;
+    box-shadow: 0 0 .75rem $color-green;
+  }
+
+  50% {
+    background-color: $color-green-dark-2;
+    box-shadow: 0 0 0.3rem $color-green-dark-3;
+    transform: scaleX(0.5);
+  }
+
+  100% {
+    background-color: $color-green-light-2;
+    box-shadow: 0 0 .75rem $color-green;
+  }
+}
+
+// Remove scaling on mobile
+@keyframes greenGlowMobile {
+  0% {
+    background-color: $color-green-light-2;
+    box-shadow: 0 0 .75rem $color-green;
+  }
+
+  50% {
+    background-color: $color-green-dark-2;
+    box-shadow: 0 0 0.3rem $color-green-dark-3;
+  }
+
+  100% {
+    background-color: $color-green-light-2;
+    box-shadow: 0 0 .75rem $color-green;
+  }
+}
+
+/* ========
+   MOVEMENT
+   ======== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Use to animate display: none -> display: block
+@keyframes fadeInDisplay {
+  0% { opacity: 0; visibility: hidden; }
+  100% { opacity: 1; visibility: visible; }
+}
+
+@keyframes fadeOutDisplay {
+  0% { opacity: 1; visibility: hidden; }
+  100% { opacity: 0; visibility: visible; }
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+}
+
+@keyframes moveLeftToRightButton {
+  0% {
+    visibility: hidden;
+    transform: translateX(-2.5rem);
+  }
+  100% {
+    transform: translate(0);
+    visibility: visible;
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+}
+
+@keyframes moveRightToLeftButton {
+  0% {
+    visibility: hidden;
+    transform: translateX(2.5rem);
+  }
+  100% {
+    visibility: visible;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveBottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+}
+
+@keyframes moveTopToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+}

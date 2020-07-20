@@ -1,0 +1,101 @@
+.form {
+  background-color: $color-green-dark-1;
+  border-radius: 7.5%;
+  box-shadow: $box-shadow-default;
+
+  margin: 0 auto;
+  height: 68rem;
+  position: relative;
+  top: -10.8rem;
+  width: 58rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @include respond(tab-port) {
+    height: 64rem;
+    width: 54.5rem;
+  }
+
+  @include respond(phone) {
+    border-radius: 0;
+    padding: 3rem 0 2rem 0;
+    height: 100%;
+    min-height: 80vh;
+    position: static;
+    width: 100%;
+  }
+
+  &__heading {
+    padding-top: 1.2rem;
+
+    @include respond(tab-port) { padding-top: 0; }
+  }
+
+  &__group {
+    padding-bottom: 2rem;
+    width: 45rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(phone) {
+      width: 80%;
+    }
+  }
+
+  // Submit button
+  &__group:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond(phone) { justify-content: center; }
+  }
+
+  &__input {
+    background-color: rgba($color-grey-light-2, 1);
+    border: none;
+    border-bottom: .4rem solid transparent;
+    border-radius: 2px;
+    color: $color-grey-dark-3;
+    display: block;
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    padding: 1.5rem 2rem;
+    transition: all .3s;
+    width: 50rem;
+
+    @include respond(phone) { font-size: 1.6rem; }
+
+    &:focus {
+      border-bottom: .4rem solid $color-green-dark-2;
+      box-shadow: 0 1rem 2rem rgba($color-black, .1);
+      outline: none;
+
+      &:invalid {
+        border-bottom: .4rem solid $color-red;
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-1;
+      line-height: 2.75rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-family: $font-secondary;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    transition: all .3s;
+
+    position: absolute;
+    left: -9999rem;
+  }
+}

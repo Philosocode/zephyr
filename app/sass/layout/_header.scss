@@ -1,0 +1,126 @@
+.header {
+	font-family: $font-secondary;
+	margin-top: 1.2rem;
+	position: absolute;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	animation: fadeIn .6s ease 2s both;
+
+	@include respond(tab-port) {
+		margin-top: 2rem;
+	}
+
+	@include respond(phone) { 
+		display: none; 
+	}
+
+	&__logo-box {
+		background-color: darken($color-grey-dark-4, 2%);
+		border-radius: .5rem;
+		box-shadow: $box-shadow-light;
+		cursor: pointer;
+		height: 8rem;
+		margin-left: 5rem;
+		min-height: 8rem;
+		min-width: 8rem;
+		transition: all .3s;
+		width: 8rem;
+
+		@include respond(tab-port) {
+			height: 6rem;
+			margin-left: 2rem;
+			min-height: 6rem;
+			min-width: 6rem;
+			width: 6rem;
+		}
+
+		// Center the logo
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			background-color: lighten($color-grey-dark-4, 1%);
+			box-shadow: $box-shadow-default;
+			transform: translateY(-2px);
+		}
+
+		&:active,
+		&:focus {
+			background-color: $color-grey-dark-3;
+			box-shadow: 0px 0px 30px -5px $color-green-light-1;
+			transform: translateY(-1px);
+		}
+	}
+
+	&__logo {
+		width: 100%;
+	}
+
+	// Swap logos on logo-box hover
+	&__logo--color, &__logo-box:hover &__logo--grayscale {
+		display: none;
+	}
+
+	&__logo--grayscale, &__logo-box:hover &__logo--color {
+		animation: fadeInDisplay .4s ease-in-out;
+		display: block;
+	}
+
+	&__list {
+		font-size: 1.75rem;
+		list-style-type: none;
+		margin-right: 5rem;
+
+		display: flex;
+
+		@include respond(tab-port) { 
+			margin-right: 2rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	&__item {
+		letter-spacing: 1.2px;
+		padding: 0 2rem;
+
+		@include respond(tab-port) {
+			letter-spacing: 1.1px;
+			padding: 0 1.25rem;
+		}
+	}
+
+	&__link {
+		color: $color-grey-dark-2;
+		position: relative;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-green-light-1;
+			top: -2px;
+		}
+
+		// Underline on link hover
+		&:before {
+			background-color: $color-green-light-1;
+			content: "";
+			height: 3px;
+			transform: scaleX(0);
+			transition: all .1s ease;
+			width: 100%;
+
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+		}
+
+		&:hover:before {
+			visibility: visible;
+			transform: scaleX(1);
+		}
+	}
+}

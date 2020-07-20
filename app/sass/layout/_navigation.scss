@@ -1,0 +1,207 @@
+.navigation {
+  transition: all .3s ease;
+
+  &__hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__checkbox { display: none; }
+
+  &__button {
+    background-color: $color-grey-light-1;;
+    border-radius: 50%;
+    box-shadow: $box-shadow-default;
+    cursor: pointer;
+    height: 5.5rem;
+    text-align: center;
+    width: 5.5rem;
+    z-index: 2000;
+
+    position: fixed;
+    right: 6rem;
+    top: 3rem;
+
+    @include respond(tab-port) {
+      height: 5rem;
+      width: 5rem;
+
+      top: 2.5rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      height: 4rem;
+      width: 4rem;
+
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+
+  &__background {
+    background: $color-grey-dark-4;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    z-index: 1000;
+
+    position: fixed;
+    right: 6rem;
+    top: 3rem;
+
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tab-port) {
+      height: 5rem;
+      width: 5rem;
+
+      top: 2.5rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      height: 3rem;
+      width: 3rem;
+      
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+  }
+
+  // Styles for the navigation page
+  &__nav {
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    z-index: 1500;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    @include respond(phone) {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+
+    // Absolutely center
+    padding-left: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -66%);
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-grey-light-1;
+      display: inline-block;
+      font-family: $font-primary;
+      font-size: 4.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .4s;
+
+      @include respond(tab-port) { font-size: 4rem; }
+      @include respond(phone) { font-size: 3rem; }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-green;
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+  }
+
+  // Styles for the 3 lines / X icon
+  &__icon {
+    margin-top: 2.66rem;
+    position: relative;
+
+    @include respond(tab-port) { margin-top: 2.5rem; }
+    @include respond(phone) { margin-top: 2rem; }
+
+    &,
+    &::before,
+    &::after {
+      background-color: $color-grey-dark-4;
+      display: inline-block;
+      height: 2px;
+      width: 3rem;
+
+      @include respond(phone) {
+        width: 2.5rem;
+        height: 1.5px;
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      left: 0;
+      position: absolute;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -.8rem;
+      @include respond(phone) { top: -.6rem; }
+    }
+
+    &::after {
+      top: .8rem;
+
+      @include respond(phone) { top: .6rem; }
+    }
+  }
+
+  &__button:hover &__icon:before {
+    top: -1rem;
+    @include respond(phone) { top: -.6rem; }
+  }
+
+  &__button:hover &__icon:after {
+    top: 1rem;
+    @include respond(phone) { top: .6rem; }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

@@ -1,0 +1,78 @@
+.projects {
+  background-color: $color-grey-light-2;
+  height: auto;
+  min-height: 48rem;
+  padding-bottom: 10.8rem;  // Offset form height
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(phone) { padding-bottom: 0; }
+
+  &__container {
+    margin: 5rem 0;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond(phone) { margin: 5rem 0 3rem 0; }
+  }
+
+  &__image-box {
+    border-radius: 1rem;
+    box-shadow: $box-shadow-light;
+    cursor: pointer;
+    height: 18rem;
+    margin: 0 2rem 5rem 2rem;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s;
+    min-width: 26rem;
+    width: 26rem;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+      height: 14rem;
+      min-width: 20rem;
+      width: 20rem;
+    }
+
+    &:hover {
+      box-shadow: $box-shadow-default;
+      transform: scale(1.03);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: $box-shadow-pressed;
+      transform: scale(1.01);
+    }
+
+    // Dark overlay on image
+    &:after {
+      background: rgba(0, 0, 0, .4);
+      border-radius: 1rem;
+      content: "\A";
+      height: 100%;
+      opacity: 0;
+      transition: all .2s;
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    @include fitImageToDiv;
+    transition: all .3s;
+  }
+}

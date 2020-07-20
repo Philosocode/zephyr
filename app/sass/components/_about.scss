@@ -1,0 +1,56 @@
+.about {
+  height: auto;
+  min-height: 105vh;
+
+  display: flex;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  &__image-side {
+    background-color: $color-grey-dark-4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+
+    @include respond(tab-land) { order: 2; }
+  }
+
+  &__image {
+    position: relative;
+    top: -1%;
+    width: 100%;
+
+    @include respond(tab-land) {
+      padding: 2rem 0 4rem 0;
+      width: 60%;
+    }
+
+    @include respond(tab-port) { padding: 2rem 0; }
+    @include respond(phone) { padding-bottom: 2rem 0; }
+  }
+
+  &__text-side {
+    background-color: $color-grey-dark-3;
+    flex-basis: 50%;
+
+    @include respond(tab-land) {
+      order: 1;
+      display: flex;
+      padding-bottom: 5rem;
+    }
+
+    @include respond(phone) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__text-container {
+    margin: 0 auto;
+    width: 60%;
+  }
+}

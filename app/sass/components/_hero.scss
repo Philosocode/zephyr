@@ -1,0 +1,103 @@
+.hero {
+  background-color: $color-grey-dark-5;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    
+    @include respond(phone) {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__left-side {
+    animation: moveLeftToRight .6s ease both .8s;
+    text-align: right;
+
+    @include respond(phone) {
+      animation-name: moveTopToBottom;
+    }
+  }
+
+  &__heading {
+    font-size: 9rem;
+
+    @include respond(tab-port) {
+      font-size: 6.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 6em;
+      text-align: left;
+    }
+  }
+
+  &__subheading {
+    font-size: 3rem;
+
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+      text-align: left;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+      margin-top: -2rem;
+    }
+  }
+
+  &__divider {
+    background-color: $color-green-light-2;
+    box-shadow: 0 0 .75rem $color-green;
+    height: 30rem;
+    margin: 0 5rem;
+    min-width: 2px;
+    width: 2px;
+
+    animation-name: fadeIn, greenGlow;
+    animation-delay: .2s, 3.1s;
+    animation-duration: .6s, 2.6s;
+    animation-fill-mode: both, none;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease, ease-in-out;
+
+    @include respond(tab-port) {
+      margin: 0 3rem;
+      height: 22rem;
+    }
+
+    @include respond(phone) {
+      height: 2px;
+      margin: 2rem 0 .8rem 0;
+      width: 25.5rem;
+
+      animation-name: fadeIn, greenGlowMobile;
+    }
+  }
+
+  & .body-text {
+    max-width: 26rem;
+    text-align: left;
+
+    animation: moveRightToLeft .6s ease 1.4s both;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      max-width: 20rem;
+      line-height: 1.5;
+    }
+
+    @include respond(phone) {
+      animation-name: moveBottomToTop;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.contact {
+  background-color: $color-grey-dark-3;
+  height: auto;
+  min-height: 60rem;
+
+  position: relative;  // Fix scroll to #contact
+}
+
+#contact {
+  background-color: transparent;
+  height: 1rem;
+  width: 1rem;
+
+  position: absolute;
+  top: -16%;
+
+  @include respond(phone) {
+    top: 0;
+  }
+}

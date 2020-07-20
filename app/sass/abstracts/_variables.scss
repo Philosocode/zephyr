@@ -1,0 +1,38 @@
+/* === COLOURS === */
+$color-green: #00B27D;
+$color-green-light-1: #1ACC97;
+$color-green-light-2: #33E5B0;
+$color-green-light-3: #4DFFCA;
+$color-green-dark-1: #009964;
+$color-green-dark-2: #007F4A;
+$color-green-dark-3: #006631;
+
+$color-red: #EF6462;
+$color-red-light: #FF9795;
+$color-red-dark: #BC312F;
+
+$color-blue: #00B1B3;
+$color-blue-light: #33E4E6;
+$color-blue-dark: #007E80;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #ccc;
+$color-grey-light-4: #B3B3B3;
+$color-grey-dark-1: #999;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #333;
+$color-grey-dark-4: #262626;
+$color-grey-dark-5: #1a1a1a;
+
+$color-black: #000;
+$color-white: #FFF;
+
+/* === FONT === */
+$font-primary: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+$font-secondary: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+
+/* === SHADOWS === */
+$box-shadow-light: 0 .25rem .75rem rgba($color-black, .2);
+$box-shadow-default: 0 1rem 2rem rgba($color-black, .2);
+$box-shadow-pressed: 0 .5rem 1rem rgba($color-black, .2);

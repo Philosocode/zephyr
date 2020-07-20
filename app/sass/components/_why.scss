@@ -1,0 +1,11 @@
+.why {
+  background-color: $color-green-dark-1;
+  padding-bottom: 5rem;
+  
+  display: flex;
+  flex-direction: column;
+
+  @include respond(phone) {
+    padding-bottom: 1rem;
+  }
+}
